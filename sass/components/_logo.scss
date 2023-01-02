@@ -1,0 +1,23 @@
+.logo {
+    font-family: raleway, sans-serif;
+    line-height: calc(31 / 26);
+    font-size: 26px;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    &-link {
+      color: var(--link-color);
+      align-self: center;
+    }
+    
+    &-header {
+      color: var(--logoblack);
+    }
+
+    &-footer {
+      color: var(--lighttxt-color);
+    }
+  }
+
+
+  

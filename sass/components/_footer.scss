@@ -1,0 +1,151 @@
+footer {
+    background-color: var(--darckbackground);
+    color: var(--lighttxt-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    & .adress {
+    margin-top: 20px;
+    margin-bottom: 9px;
+  }
+  }
+
+  .footer-article {
+    margin-bottom: 9px;
+    font-style: normal;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+  }
+
+  .footer__link {
+    text-align: left;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition: fill 250ms var(--timing-function), 
+              background-color 250ms var(--timing-function);
+              
+            &:hover,
+            &:focus {
+            color: var(--link-color);
+            fill: var(--link-color);
+            transition: fill 250ms var(--timing-function), 
+                        color 250ms var(--timing-function);
+              }
+            }
+  
+  .footer__mail {
+    margin-bottom: 9px;
+  }
+    
+  .join {
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  }
+  
+  .our-soc__list {
+    display: flex;
+    gap: 10px;
+  }
+  .our-soc__items {
+    width: 44px;
+    height: 44px;
+  }
+  
+   .our-soc__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 50%;
+    background-color:rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    align-items: center;
+    fill:#ffffff;
+    transition: background-color 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+     background-color:var(--link-color);
+     transition: background-color 250ms var(--timing-function);
+    }
+  }
+   
+   .footer-colums {display: flex;
+  justify-content: space-between;}
+
+   .first-colum {margin-right: 70px;}
+   .second-colum {margin-right: 93px;}
+   .third-colum{margin-left:auto;}
+  
+   .footer-container {
+    text-align: center;
+
+    @media screen and (min-width:480px) {
+      text-align: center;
+    }
+  
+    @media screen and (min-width:768px) {
+     
+    }
+  
+    @media screen and (min-width:1200px) {
+      display: flex;
+    align-items: baseline;
+    }
+   }
+  
+   .your-mail {
+    height: 50px;
+    width: 358px;
+    margin-right: 12px;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: #2F303A;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    &:focus-within{
+      outline: none;
+      color: var(--lighttxt-color);
+      border: 1px solid  #2196F3;
+      border-radius: 4px;
+     }
+   }
+    
+   .join-mail {
+    
+    @media screen and (min-width:480px) {
+     
+    }
+  
+    @media screen and (min-width:768px) {
+     
+    }
+  
+    @media screen and (min-width:1200px) {
+      display: inline-flex;
+    }}
+
+   
+  
+   .button-footer { 
+    padding-left: 28px;
+    padding-right: 28px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    }
+  
+  .icon-send {
+    fill: currentColor;
+    margin-left: 10px;
+   }
