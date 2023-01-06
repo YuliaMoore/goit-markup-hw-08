@@ -28,48 +28,49 @@
   </head>
   <body>
     <header class="navigation">
-      <div class="container">
-       
+      <div class="container header__container">
           <a class="logo-link logo" href="/index.html">Web<span class="logo logo-header">Studio</span></a>
-          <div><button type="button" class="menu-button is-open js-open-menu" 
-          aria-expanded="false"
-          aria-controls="mobile-menu">
+          <div class="header__menu">
+            <button type="button" 
+            class="menu-button js-open-menu" 
+            aria-expanded="false"
+            aria-controls="mobile-menu">
             <svg width="40" height="40" 
             aria-label="переключатель мобильного меню">
               <use class="icon-cross js-close-menu" href="./images/icons.svg#icon-close" ></use>
               <use class="icon-menu js-open-menu" href="./images/icons.svg#icon-menu"></use>
             </svg>
-          </button></div>
-         <div class="mobile-menu js-menu-container">
-          <div class="container">
-          <button class="btn-close__menu js-close-menu"><svg width="40" height="40"><use class="icon-cross" href="./images/icons.svg#icon-close" .js-close-menu></use></svg></button>
-          <nav class="main-nav">
-          <ul class="site-nav">
-              <li class="site-nav__unit first-unit"><a href="./index.html" class="link site-nav__link current-page">Студія</a></li>
-              <li class="site-nav__unit"><a href="./portfolio.html" class="site-nav__link link">Портфоліо</a></li>
-              <li class="site-nav__unit"><a href="#" class="site-nav__link link">Контакти</a></li>
+          </button>
+
+          <div class="mobile-menu js-menu-container">
+            <!-- <button class="btn-close__menu js-close-menu"><svg width="40" height="40"><use class="icon-cross" href="./images/icons.svg#icon-close" .js-close-menu></use></svg></button> -->
+            <nav class="main-nav">
+            <ul class="site-nav">
+                <li class="site-nav__unit first-unit"><a href="./index.html" class="link site-nav__link current-page">Студія</a></li>
+                <li class="site-nav__unit"><a href="./portfolio.html" class="site-nav__link link">Портфоліо</a></li>
+                <li class="site-nav__unit"><a href="#" class="site-nav__link link">Контакти</a></li>
+              </ul>
+            <ul class="contact">
+              <li class="contact__unit">
+                <a href="tel:+380961111111" class="link contact__link">
+                  <svg class="icon-tel"><use href="./images/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a>
+              </li>
+              <li class="contact__unit">
+                <a href="mailto:info@devstudio.com" class="link contact__link"
+                  ><svg class="icon-envelope"><use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a                >
+              </li >
             </ul>
-          <ul class="contact">
-            <li class="contact__unit">
-              <a href="tel:+380961111111" class="link contact__tel">
-                <svg class="icon-tel"><use href="./images/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a>
-            </li>
-            <li class="contact__unit">
-              <a href="mailto:info@devstudio.com" class="link contact__mail"
-                ><svg class="icon-envelope"><use href="./images/icons.svg#icon-envelope"></use></svg>info@devstudio.com</a
-              >
-            </li >
-          </ul>
-          <ul class="nav-soc">
-            <li class="nav-soc__item"><a class="nav-soc__link" href="#">Instagram</a></li>
-            <li class="nav-soc__item"><a class="nav-soc__link" href="#">Twitter</a></li>
-            <li class="nav-soc__item"><a class="nav-soc__link" href="#">Facebook</a></li>
-            <li class="nav-soc__item"><a class="nav-soc__link" href="#">LinkedIn</a></li>
-          </ul>
-        </nav>  
-          </div> 
-        </div>      
+            <ul class="nav-soc">
+              <li class="nav-soc__item"><a class="nav-soc__link" href="#">Instagram</a></li>
+              <li class="nav-soc__item"><a class="nav-soc__link" href="#">Twitter</a></li>
+              <li class="nav-soc__item"><a class="nav-soc__link" href="#">Facebook</a></li>
+              <li class="nav-soc__item"><a class="nav-soc__link" href="#">LinkedIn</a></li>
+            </ul>
+          </nav>  
+          
+          </div>   
       </div>
+    </div>
     </header> 
     <main>
       <section class="bunner overlay">
@@ -130,19 +131,26 @@
         <ul class="work">
           <li class="work-item">
             <div class="image-box">
-            <img src="./images/img1.jpg" width="370" alt="Десктопні додатки" />
+            <img 
+            srcset="./images/img1.jpg 1x, ./images/img1@2x 2x"
+            src="./images/img1.jpg" width="370" alt="Десктопні додатки" />
             <p class="after-title label">Десктопні додатки</p>
             </div>
           </li>
           <li class="work-item">
             <div class="image-box">
-            <img src="./images/img2.jpg" width="370" alt="Мобільні додатки" />
+            <img 
+            srcset="./images/img2.jpg 1x, ./images/img2@2x 2x"
+            src="./images/img2.jpg" width="370" alt="Мобільні додатки" />
             <p class="after-title label">Мобільні додатки</p>
             </div>
           </li>
           <li class="work-item">
             <div class="image-box">
-            <img src="./images/img3.jpg" width="370" alt="Дизайнерські рішення"/>
+            <img 
+            srcset="./images/img3.jpg 1x, 
+            ./images/img3@2x 2x"
+            src="./images/img3.jpg" width="370" alt="Дизайнерські рішення"/>
             <p class="label after-title ">Дизайнерські рішення</p>
             </div>
           </li>
@@ -154,7 +162,14 @@
         <h2 class="section-title">Наша команда</h2>
         <ul class="people__list">
           <li class="people__items">
-            <img src="./images/igor.jpg" width="270" alt="Ігор Дем'яненко" />
+            <img 
+            srcset="./images/staff/igor_desktop_1x.jpg 1x, ./images/staff/igor_desktop_2x.jpg 2x,"
+            src="./images/staff/igor_desktop_1x.jpg 1x" width="270" alt="Ігор Дем'яненко" />
+            <picture>
+              <source srcset="./images/staff/igor_desktop_1x.jpg 1x, ./images/staff/igor_desktop_2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/staff/igor_tablet_1x.jpg 1x, ./images/staff/igor_tablet_2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/staff/igor_mob_1x.jpg 1x, ./images/staff/igor_mob_2x.jpg 2x" media="(min-width:480px)">
+            </picture>
             <h3 class="people__name">Ігор Дем'яненко</h3>
             <p class="people__profession">Product Designer</p>
             <ul class="people-soc__list">
@@ -171,7 +186,14 @@
             </ul>
           </li>
           <li class="people__items">
-            <img src="./images/olga.jpg" width="270" alt="Ольга Рєпіна" />
+            <img 
+            srcset="./images/staff/olga_desktop_1x.jpg 1x, ./images/staff/olga_desktop_2x.jpg 2x,"
+            src="./images/staff/olga_desktop_1x.jpg" width="270" alt="Ольга Рєпіна" />
+            <picture>
+              <source srcset="./images/staff/olga_desktop_1x.jpg 1x, ./images/staff/olga_desktop_2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/staff/olga_tablet_1x.jpg 1x, ./images/staff/olga_tablet_2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/staff/olga_mob_1x.jpg 1x, ./images/staff/olga_mob_2x.jpg 2x" media="(min-width:480px)">
+            </picture>
             <h3 class="people__name">Ольга Рєпіна</h3>
             <p class="people__profession">Frontend Developer</p>
             <ul class="people-soc__list">
@@ -182,7 +204,14 @@
             </ul>
           </li>
           <li class="people__items">
-            <img src="./images/nick.jpg" width="270" alt="Микола Тарасов" />
+            <img 
+            srcset="./images/staff/nick_desktop_1x.jpg 1x, ./images/staff/nick_desktop_2x.jpg 2x,"
+            src="./images/staff/nick_desktop_1x.jpg" width="270" alt="Микола Тарасов" />
+            <picture>
+              <source srcset="./images/staff/nick_desktop_1x.jpg 1x, ./images/staff/nick_desktop_2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/staff/nick_tablet_1x.jpg 1x, ./images/staff/nick_tablet_2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/staff/nick_mob_1x.jpg 1x, ./images/staff/nick_mob_2x.jpg 2x" media="(min-width:480px)">
+            </picture>
             <h3 class="people__name">Микола Тарасов</h3>
             <p class="people__profession">Marketing</p>
             <ul class="people-soc__list">
@@ -193,7 +222,14 @@
             </ul>
           </li>
           <li class="people__items">
-            <img src="./images/mikhail.jpg" width="270" alt="Михайло Єрмаков" />
+            <img 
+            srcset="./images/staff/mikhail_desktop_1x.jpg 1x, ./images/staff/mikhail_desktop_2x.jpg 2x,"
+            src="./images/staff/mikhail_desktop_1x.jpg" width="270" alt="Михайло Єрмаков" />
+            <picture>
+              <source srcset="./images/staff/mikhail_desktop_1x.jpg 1x, ./images/staff/mikhail_desktop_2x.jpg 2x" media="(min-width:1200px)">
+              <source srcset="./images/staff/mikhail_tablet_1x.jpg 1x, ./images/staff/mikhail_tablet_2x.jpg 2x" media="(min-width:768px)">
+              <source srcset="./images/staff/mikhail_mob_1x.jpg 1x, ./images/staff/mikhail_mob_2x.jpg 2x" media="(min-width:480px)">
+            </picture>
             <h3 class="people__name">Михайло Єрмаков</h3>
             <p class="people__profession">UI Designer</p>
             <ul class="people-soc__list">
@@ -223,6 +259,7 @@
     </main>
      <footer class="footer">
       <div class="container footer-container">
+        <div class="footer__tablet">
       <div class="first-colum">
       <a class="logo-link logo" href="/index.html"
         >Web<span class="logo-footer logo">Studio</span></a>
@@ -248,12 +285,15 @@
         <li class="our-soc__items"><a href="#" class="our-soc__link link"><svg class="our-social-icons" width="20" height="20"><use href="./images/icons.svg#icon-linkedin"></use></svg></a></li>
       </ul>
       </div>
+    </div>
       <div class="third-colum">
         <p  class="join">Підпишіться на розсилку</p>
         <form  class="join-mail" action="URL">
-          <label>
+      
+          <label class="form__label">
             <input type="email" name="email" class="your-mail" placeholder="E-mail"/>
           </label>
+      
         <button type="submit" class="btn button-footer">Підписатися <svg class="icon-send" width="24" height="24"><use href="./images/icons.svg#icon-send"></use></svg> </button>
         </form>
       </div>
@@ -312,7 +352,8 @@
       </form> 
     </div>
     </div>
+    
         <script src="./js/modal.js"></script>
-        <script defer src="./js/mmobile-menu.js"></script>
+        <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

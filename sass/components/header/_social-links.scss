@@ -1,0 +1,19 @@
+.nav-soc {display: flex;
+    margin-top: 64px;
+    @media screen and (min-width: 768px) {display: none;}
+  }
+  .nav-soc__item {
+    padding: 0 10px;
+    list-style: none;
+    &:not(:last-child){
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+   }
+  }
+  .nav-soc__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
+    color: var(--link-color);
+  }

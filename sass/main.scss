@@ -11,7 +11,10 @@
 @import './utils/mixins';
 @import './components/logo';
 @import './components/underline';
-@import './components/page-header';
+// @import './components/page-header';
+@import './components/header/button';
+@import './components/header/social-links';
+@import './components/header/modal-menu';
 @import './components/bunner';
 @import './components/benefits';
 @import './components/our-work';

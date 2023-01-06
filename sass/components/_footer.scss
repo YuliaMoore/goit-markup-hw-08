@@ -46,11 +46,13 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+  margin-top: 60px;
   }
   
   .our-soc__list {
     display: flex;
     gap: 10px;
+    justify-content: center;
   }
   .our-soc__items {
     width: 44px;
@@ -74,13 +76,28 @@ footer {
     }
   }
    
-   .footer-colums {display: flex;
-  justify-content: space-between;}
+   .footer-colums {
+    @media screen and (min-width:1200px){ 
+      display: flex;
+  justify-content: space-between;}}
 
-   .first-colum {margin-right: 70px;}
-   .second-colum {margin-right: 93px;}
-   .third-colum{margin-left:auto;}
+   .first-colum {
+    @media screen and (min-width:1200px) {margin-right: 70px;}}
+   .second-colum {
+    @media screen and (min-width:768px) {margin-top: 0;
+    padding-top: 0;}
+    @media screen and (min-width:1200px) {margin-right: 93px;}}
+   .third-colum{
+    @media screen and (min-width:480px) {
+        }
+   
+    @media screen and (min-width:1200px) {margin-left:auto;}}
+  .footer__tablet {
+    @media screen and (min-width:768px) {
+    display: flex;
+    justify-content: space-around;
   
+  }}
    .footer-container {
     text-align: center;
 
@@ -100,8 +117,9 @@ footer {
   
    .your-mail {
     height: 50px;
-    width: 358px;
-    margin-right: 12px;
+    width: 450px;
+    margin-right: 15px;
+    margin-bottom: 20px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: #2F303A;
@@ -112,6 +130,10 @@ footer {
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+
+    @media  screen and (min-width: 1200px) {
+      width: 358px;
+    }
 
     &:focus-within{
       outline: none;
@@ -124,7 +146,9 @@ footer {
    .join-mail {
     
     @media screen and (min-width:480px) {
-     
+         display: flex;
+         flex-wrap: wrap;
+        justify-content: center;
     }
   
     @media screen and (min-width:768px) {
@@ -132,17 +156,23 @@ footer {
     }
   
     @media screen and (min-width:1200px) {
-      display: inline-flex;
+      display: flex;
+      flex-wrap: nowrap;
     }}
 
-   
-  
+    .form__label{
+      @media screen and (min-width:480px) {
+        width: 100%;
+   }
+    }
+    
    .button-footer { 
     padding-left: 28px;
     padding-right: 28px;
     height: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
     }
   
   .icon-send {
