@@ -10,28 +10,22 @@
   
   .sorting {
     display: flex;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
     gap: 8px;
+    max-width: 340px;
 
-    @media screen and (min-width:480px) {
-     width: 340px;
-     flex-wrap: wrap; 
-    }
-  
     @media screen and (min-width:768px) {
-     
-    }
-  
-    @media screen and (min-width:1200px) {
+      max-width: 100%;
+      margin-bottom: 50px;
+      flex-wrap: nowrap;
       justify-content: center;
     }
-
   }
 
   .sorting__button {
     border-radius: 4px;
     padding: 6px 22px;
-    margin-bottom: 15px;
     border-color: transparent;
     background-color: var(--background-comand);
     cursor: pointer;
@@ -59,6 +53,40 @@
     background-color: var(--link-color);
     color: var(--lighttxt-color);
   }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .project__picture{
+    width:100%;
+  }
+  
+  .projects-box {
+    border-left: 1px solid #eeeeee; 
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 24px;
+    transition: box-shadow 250ms var(--timing-function);}
+  
+  .projects .title,
+  .projects p {
+    text-align: left;
+  }
+  
+  .projects__item {
+    flex-basis: 450px;
+
+    @media screen and (min-width:768px) {
+      flex-basis: calc((100% - 30px) /2); 
+    }
+    @media screen and (min-width:1200px) {
+      flex-basis: calc((100% - 60px) / 3); 
+    }
+   
+  }
   
   .portfolio .title {
     margin-bottom: 4px;
@@ -73,6 +101,7 @@
   .image {
     position:relative;
     overflow: hidden;
+    
   }
   .popup-box {
     width: 100%;
@@ -107,40 +136,14 @@
       transition: opacity 250ms var(--timing-function);}
   
   
-  .projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
   
-  .projects-box {
-    border-left: 1px solid #eeeeee; 
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    padding: 20px 24px;
-    transition: box-shadow 250ms var(--timing-function);}
+  // .projects .item:nth-child(3n) {
+  //   margin-right: 0;
+  // }
   
-  .projects .title,
-  .projects p {
-    text-align: left;
-  }
-  
-  .projects .item {
-    width: 100%;
-
-    @media screen and (min-width:1200px) {
-    flex-basis: calc((100% - 60px) / 3); 
-    margin-right: 30px;}
-  }
-  .projects .item:nth-child(3n) {
-    @media screen and (min-width:1200px) {
-    margin-right: 0;}
-  }
-  
-  .projects .item:not(:nth-last-child(3)) {
-    @media screen and (min-width:1200px) {
-    margin-bottom: 30px;}
-  }
+  // .projects .item:not(:nth-last-child(3)) {
+  //   margin-bottom: 30px;
+  // }
   
   .projects p {
     color:var(--maintxt-color);

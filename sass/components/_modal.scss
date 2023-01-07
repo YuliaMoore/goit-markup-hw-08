@@ -10,38 +10,38 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    padding: 93px 15px;
+    overflow-y: scroll;
    }}
     
    .modal {
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 90px;
-     background-color: var(--mainbackground);
+    top: 43px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    min-width: 450px;
+    background-color: var(--mainbackground);
     border-radius: 4px;
-    padding:40px;
+    overflow-y: scroll;
+  
     transition: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function);
-    max-width: 450px;
-    width: 100%;
 
-
-    @media screen and (min-width:480px) {
+    @media screen and (max-width: 767px) {
       transform: translateX(-50%);
- }
-
- @media screen and (min-width:768px) {
+    }
   
- }
-
- @media screen and (min-width:1200px) {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  width: 528px;
-  min-height: 581px;
- }}
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      left: 50%;
+      top: 208px;
+      width: 450px;
+      transform: translateX(-50%) scale(1);
+   }
+   @media screen and (min-width: 1200px) {
+    width: 528px;
+   }}
   
    .backdrop.is-hidden .modal {
     transform: translate(-50%,-50%) scaleY(0);
@@ -69,7 +69,7 @@
     transition: fill 250ms var(--timing-function);
    }
   
-  .modal-title {
+  .modal-title {  
   font-weight: 700;
   font-size: 20px;
   line-height: calc(30 / 20);
@@ -77,10 +77,10 @@
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin-bottom: 12px;
-
   @media screen and (min-width:1200px) {
     line-height: calc(23 / 20);
-  }}
+  }
+  }
   
   .modal-input{
     width: 100%;
@@ -166,10 +166,20 @@
     position: relative;
     display: block;
   }
-    
-  label.modal-mailing-label{
+
+
+   label.modal-mailing-label{
     display: flex;
   align-items: center;
+  font-weight: 400;
+font-size: 12px;
+line-height: calc(14 / 12);
+letter-spacing: 0.03em;
+
+@media screen and (min-width:1200px) {
+  line-height: calc(24 / 14);
+  font-size: 14px;
+}
 
   &::before{
     width: 16px;
@@ -190,13 +200,5 @@
   background-position: center;
   border:none;
   }
-
-  .modal-mailing-label{
-    @media screen and (max-width:1199px) {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.03em;
-  }}
  
   .terms{ margin-left: 7px;}
