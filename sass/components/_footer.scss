@@ -111,11 +111,15 @@ footer {
 
     .footer__tablet {
       @media screen and (min-width: 768px) and (max-width: 1199px) {
-        justify-content: space-around;
+        align-items: space-around;
       }
       @media screen and (min-width: 768px) {
         display: flex;
-      }}
+      }
+    @include desktop {
+      display:flex;
+      align-items: space-around;
+    }}
   
   
    .your-mail {

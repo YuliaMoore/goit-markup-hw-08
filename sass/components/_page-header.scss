@@ -12,8 +12,13 @@
     display: flex;
     height: 60px;
     
+    
     @include tablet {
-    height: 80px;}
+    height: 80px;
+    align-items: center;}
+    @include desktop {
+      align-items: baseline;
+    }
   }
   
  .main-nav {
@@ -132,7 +137,9 @@ margin-left: 93px;
 .contact {
   display: none;
     @media screen and (min-width: 768px) {
-      margin-left: 96px;
+      display: block;
+      // margin-left: 96px;
+      margin-left: auto;
     }
   
     @media screen and (min-width: 1200px) {
@@ -147,11 +154,24 @@ margin-left: 93px;
     display: flex;
     justify-items: center;
     gap: 40px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 10px;}
     }
 
 .contact__link{
   color: var(--maintxt-color);
-  transition: color 250ms var(--timing-function);}
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.02em;
+  transition: color 250ms var(--timing-function);
+  
+&:not(:last-child){
+  gap: 10px;}
+}
 
   .icon-envelope,
   .icon-tel {
@@ -169,6 +189,7 @@ margin-left: 93px;
     .icon-envelope {
       width: 16px;
       height: 12px;
+      display: flex;
       }
     
     .icon-tel {
