@@ -183,6 +183,16 @@ img {
 @media screen and (min-width: 768px) {
   .header__top {
     height: 80px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__top {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -205,41 +215,6 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.site-nav__unit {
-  position: relative;
-}
-
-.first-unit {
-  margin-left: 93px;
-}
-
-.current-page {
-  color: var(--link-color);
-}
-.current-page::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  border-bottom: 4px solid #2196F3;
-  width: 100%;
-  border-radius: 2px;
-}
-
-.current-page::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: block;
-  background-color: var(--link-color);
-  height: 4px;
-  width: 100%;
-  border-radius: 2px;
-  opacity: 1;
 }
 
 .navigation .link {
@@ -303,12 +278,41 @@ img {
   opacity: 1;
 }
 
+.site-nav__unit {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .first-unit {
+    margin-left: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .first-unit {
+    margin-left: 93px;
+  }
+}
+
+.current-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background-color: var(--link-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  opacity: 1;
+}
+
 .contact {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .contact {
-    margin-left: 96px;
+    display: block;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -329,11 +333,28 @@ img {
   justify-items: center;
   gap: 40px;
 }
+@media screen and (min-width: 768px) {
+  .contact__unit {
+    margin-bottom: 10px;
+  }
+}
 
 .contact__link {
   color: var(--maintxt-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
+}
+.contact__link:not(:last-child) {
+  gap: 10px;
 }
 
 .icon-envelope,
@@ -359,6 +380,9 @@ img {
 .icon-envelope {
   width: 16px;
   height: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .icon-tel {
@@ -381,7 +405,6 @@ img {
   border: none;
   cursor: pointer;
   margin-left: auto;
-  z-index: 2;
 }
 .menu-button:hover, .menu-button:focus {
   fill: var(--link-color);
@@ -403,41 +426,6 @@ img {
   display: none;
 }
 
-.mobile-menu {
-  background-color: var(--mainbackground);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media screen and (max-width: 767px) {
-  .mobile-menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    padding: 10px 15px;
-    -webkit-transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
-    transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
-    transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
-    transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function), visibility 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
-  }
-  .mobile-menu.is-open {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
 .bunner,
 footer {
   background-color: var(--darckbackground);
@@ -455,13 +443,13 @@ footer {
   background-position: center;
   background-size: cover;
   text-align: center;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/bunner_mobile.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bunner_mobile.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(.../images/bunner.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.../images/bunner.jpg);
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .bunner {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/bunner_mobile@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bunner_mobile@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(.../images/bunner_desktop@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(.../images/bunner_desktop@2x.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 480px), screen and (min-resolution: 192dpi) and (min-width: 480px), screen and (min-resolution: 2dppx) and (min-width: 480px) {
@@ -472,20 +460,20 @@ footer {
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-device-pixel-ratio: 2) and (min-width: 480px) and (min-resolution: 2dppx), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-resolution: 192dpi) and (min-width: 480px) and (min-resolution: 2dppx), screen and (min-resolution: 2dppx) and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) and (min-width: 480px) and (min-resolution: 2dppx) {
   .bunner {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/bunner_mobile@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bunner_mobile@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bunner_mobile@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bunner_mobile@2x.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .bunner {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/bunner_tablet.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bunner_tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bunner_tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bunner_tablet.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (min-resolution: 2dppx), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-resolution: 192dpi) and (min-width: 768px) and (min-resolution: 2dppx), screen and (min-resolution: 2dppx) and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) and (min-width: 768px) and (min-resolution: 2dppx) {
   .bunner {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/bunner_tablet@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bunner_tablet@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bunner_tablet@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bunner_tablet@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -500,8 +488,8 @@ footer {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .bunner {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/bunner_desktop@2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/bunner_desktop@2x.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bunner_desktop@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bunner_desktop@2x.jpg);
   }
 }
 
@@ -878,9 +866,13 @@ footer .adress {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -995,8 +987,9 @@ footer .adress {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__tablet {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1535,15 +1528,37 @@ label.modal-mailing-label::before {
 .menu-toggle:hover, .menu-toggle:focus {
   fill: var(--link-color);
 }
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
+
+.mobile-menu {
+  position: fixed;
+  background-color: var(--mainbackground);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  -webkit-transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), opacity 250ms var(--timing-function), visibility 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
-@media screen and (min-width: 1200px) {
-  .menu-toggle {
-    display: none;
-  }
+.mobile-menu.is-open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
 }
 
 .mobile-menu__wrap {
@@ -1557,12 +1572,9 @@ label.modal-mailing-label::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100vw;
-  height: 100vh;
 }
 
 .mobile-nav {
-  margin-left: 40px;
   margin-top: 8px;
 }
 
@@ -1584,13 +1596,12 @@ label.modal-mailing-label::before {
   transition: color 250ms var(---timing-function);
 }
 
-.current-page {
+.active-page {
   color: var(--link-color);
 }
 
 .mobile-contact {
-  gap: 32px;
-  margin-left: 40px;
+  margin-bottom: 32px;
 }
 
 .mobile-contact__link {
@@ -1614,8 +1625,6 @@ label.modal-mailing-label::before {
   display: -ms-flexbox;
   display: flex;
   margin-top: 64px;
-  margin-bottom: auto;
-  margin-left: 40px;
 }
 
 .mobile-soc__item {
