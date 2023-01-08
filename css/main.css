@@ -953,6 +953,7 @@ footer .adress {
 }
 @media screen and (min-width: 1200px) {
   .first-colum {
+    text-align: left;
     margin-right: 70px;
   }
 }
@@ -1000,10 +1001,14 @@ footer .adress {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .join-label {
+    width: 100%;
+  }
+}
+
 .your-mail {
   height: 50px;
-  max-width: 450px;
-  margin-right: 12px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: #2F303A;
@@ -1016,6 +1021,7 @@ footer .adress {
           align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .your-mail {
@@ -1025,6 +1031,7 @@ footer .adress {
 @media screen and (min-width: 1200px) {
   .your-mail {
     width: 358px;
+    margin-right: 12px;
   }
 }
 .your-mail:focus-within {
@@ -1291,11 +1298,11 @@ footer .adress {
 .modal {
   position: absolute;
   left: 50%;
-  top: 43px;
+  top: 50%;
   padding: 40px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  min-width: 450px;
+  width: 95%;
   background-color: var(--mainbackground);
   border-radius: 4px;
   overflow-y: scroll;
@@ -1306,20 +1313,25 @@ footer .adress {
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
 @media screen and (max-width: 767px) {
   .modal {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 @media screen and (min-width: 768px) {
   .modal {
     position: absolute;
     left: 50%;
-    top: 208px;
+    top: 50%;
     width: 450px;
-    -webkit-transform: translateX(-50%) scale(1);
-            transform: translateX(-50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1439,6 +1451,11 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+}
+@media screen and (max-width: 264px) {
+  .modal-btn {
+    padding: 0;
+  }
 }
 
 .modal-input-wrapper:focus-within {
@@ -1573,6 +1590,8 @@ label.modal-mailing-label::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
+  height: 100%;
   margin-bottom: auto;
 }
 
@@ -1628,6 +1647,8 @@ label.modal-mailing-label::before {
   display: -ms-flexbox;
   display: flex;
   margin-top: 64px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mobile-soc__item {

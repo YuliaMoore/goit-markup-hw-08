@@ -17,27 +17,29 @@
    .modal {
     position: absolute;
     left: 50%;
-    top: 43px;
+    top: 50%;
     padding: 40px;
     transform: translate(-50%, -50%);
-    min-width: 450px;
+    width: 95%;
     background-color: var(--mainbackground);
     border-radius: 4px;
     overflow-y: scroll;
   
     transition: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function);
+    @media screen and (min-width: 480px) {
+      width: 450px;}
 
     @media screen and (max-width: 767px) {
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
     }
   
     @media screen and (min-width: 768px) {
       position: absolute;
       left: 50%;
-      top: 208px;
+      top: 50%;
       width: 450px;
-      transform: translateX(-50%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
    }
    @media screen and (min-width: 1200px) {
     width: 528px;
@@ -139,7 +141,11 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-  }
+
+    @media screen and (max-width:264px)
+    {padding: 0;}
+    }
+
   
   .modal-input-wrapper:focus-within{
     fill: var(--link-color);
