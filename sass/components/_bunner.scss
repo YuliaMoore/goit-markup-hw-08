@@ -17,12 +17,12 @@ background-size:cover ;
 text-align: center;
 background-image: linear-gradient( rgba(47, 48, 58, 0.4),
 rgba(47, 48, 58, 0.4)), 
-url(/images/bunner_mobile.jpg);
+url(.../images/bunner.jpg);
 
 @include retina {
   background-image: linear-gradient( rgba(47, 48, 58, 0.4),
   rgba(47, 48, 58, 0.4)), 
-  url(/images/bunner_mobile@2x.jpg);
+  url(.../images/bunner_desktop@2x.jpg);
 
 
 @media screen and (min-width:480px) {
@@ -33,19 +33,19 @@ url(/images/bunner_mobile.jpg);
   @include retina {
     background-image: linear-gradient( rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)), 
-    url(/images/bunner_mobile@2x.jpg);
+    url(../images/bunner_mobile@2x.jpg);
   }}
 
 
 @media screen and (min-width:768px) {
   background-image: linear-gradient( rgba(47, 48, 58, 0.4),
   rgba(47, 48, 58, 0.4)), 
-  url(/images/bunner_tablet.jpg);
+  url(../images/bunner_tablet.jpg);
   
   @include retina {
     background-image: linear-gradient( rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)), 
-    url(/images/bunner_tablet@2x.jpg);
+    url(../images/bunner_tablet@2x.jpg);
   }}
 }
 
@@ -61,7 +61,7 @@ url(../images/bunner.jpg);
 @include retina {
   background-image: linear-gradient( rgba(47, 48, 58, 0.4),
   rgba(47, 48, 58, 0.4)), 
-  url(/images/bunner_desktop@2x.jpg);
+  url(../images/bunner_desktop@2x.jpg);
 }}
 }
 

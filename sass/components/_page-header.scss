@@ -103,22 +103,6 @@ text-decoration: none;
 margin-left: 93px;
 }}
 
-// .current-page {
-//   color: var(--link-color);
-//     &::after {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     bottom: 0;
-//     display: block;
-//     // border-bottom: 4px solid #2196F3;
-//     background-color:var(--link-color);
-//     height: 4px;
-    
-//     border-radius: 2px;
-//     opacity:1 ;}
-// }
-
 .current-page::after{
   content: "";
   position: absolute;
@@ -131,8 +115,6 @@ margin-left: 93px;
   border-radius: 2px;
   opacity:1 ;
 }
-
-
 
 .contact {
   display: none;
@@ -195,8 +177,6 @@ margin-left: 93px;
     .icon-tel {
       width: 10px;
       height: 16px;}
-    
-
 
 .menu-button {
     background-color: transparent;
@@ -207,17 +187,14 @@ margin-left: 93px;
     border: none;
     cursor: pointer;
     margin-left: auto;
-    z-index: 2;
-
+ 
    &:hover,
    &:focus{
+  fill: var(--link-color);   }
 
-fill: var(--link-color);
+   @include tablet{
+    display: none;
    }
-
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
 }
 
 .icon-cross {
@@ -225,46 +202,9 @@ fill: var(--link-color);
 
   .icon-menu.is-open & {
     display: block;
-  }
-}
-
-.icon-menu {
+  }}
+ 
+  .icon-menu {
   .menu-button.is-open & {
     display: none;
-  }
-}
-
-.mobile-menu {
-  background-color: var(--mainbackground);
-  display: flex;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    transform: translateY(-100%);
-    visibility: hidden;
-    opacity: 0;
-
-    position: absolute;
-     top: 0px;
-     left: 0;
-     width: 100%;
-     height: 100vh;
-
-     padding: 10px 15px;
-
-
-    transition: transform 250ms var(--timing-function),
-      opacity 250ms var(--timing-function),
-      visibility 250ms var(--timing-function);
-
-  @media screen and (min-width:768px) {
-    display: none;
-  }
-
-    &.is-open {
-      transform: translateY(0);
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-}
+  }}
