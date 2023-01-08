@@ -17,16 +17,17 @@
 
 .mobile-menu {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8888;
   background-color: var(--mainbackground);
   flex-direction: column;
   transform: translateY(-100%);
   visibility: hidden;
+  overflow: hidden;
   opacity: 0;
-  position: absolute;
   top: 0px;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   padding-top: 10px;
   padding-right: 15px;
   padding-bottom: 48px;
@@ -39,6 +40,7 @@
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
+   
   }}
 
 .mobile-menu__wrap {
@@ -47,11 +49,12 @@
   justify-content: space-between;
   // width: 100vw;
   // height: 100vh;
+  margin-bottom: auto;
 }
 
 .mobile-nav {
   margin-top: 8px;
-
+  margin-bottom: auto;
 }
 
 .mobile-nav__unit {

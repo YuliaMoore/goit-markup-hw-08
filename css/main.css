@@ -1531,6 +1531,9 @@ label.modal-mailing-label::before {
 
 .mobile-menu {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8888;
   background-color: var(--mainbackground);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1539,12 +1542,10 @@ label.modal-mailing-label::before {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   visibility: hidden;
+  overflow: hidden;
   opacity: 0;
-  position: absolute;
   top: 0px;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   padding-top: 10px;
   padding-right: 15px;
   padding-bottom: 48px;
@@ -1572,10 +1573,12 @@ label.modal-mailing-label::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: auto;
 }
 
 .mobile-nav {
   margin-top: 8px;
+  margin-bottom: auto;
 }
 
 .mobile-nav__unit {
